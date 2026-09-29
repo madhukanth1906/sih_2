@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#4cd7f6","surface-tint":"#00687a","tertiary":"#0053db","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","inverse-on-surface":"#eaf1ff","surface-container-low":"#eff4ff","primary-fixed":"#acedff","tertiary-container":"#85a3ff","secondary-fixed-dim":"#b5c7ea","on-primary-fixed":"#001f26","tertiary-fixed":"#dbe1ff","tertiary-fixed-dim":"#b4c5ff","on-tertiary-container":"#003490","primary-fixed-dim":"#4cd7f6","background":"#f8f9ff","secondary-container":"#c8dbfe","surface-container":"#e5eeff","on-error":"#ffffff","inverse-surface":"#213145","surface-container-lowest":"#ffffff","on-background":"#0b1c30","on-tertiary-fixed":"#00174b","on-surface":"#0b1c30","on-primary-fixed-variant":"#004e5c","secondary":"#4d5f7d","primary-container":"#06b6d4","surface-dim":"#cbdbf5","on-secondary":"#ffffff","primary":"#00687a","surface-bright":"#f8f9ff","outline-variant":"#bcc9cd","on-secondary-fixed-variant":"#354764","on-primary":"#ffffff","on-tertiary-fixed-variant":"#003ea8","on-tertiary":"#ffffff","outline":"#6d797d","on-secondary-container":"#4e607e","surface-container-high":"#dce9ff","error":"#ba1a1a","surface-variant":"#d3e4fe","on-surface-variant":"#3d494c","secondary-fixed":"#d5e3ff","surface":"#f8f9ff","on-error-container":"#93000a","on-primary-container":"#00424f","on-secondary-fixed":"#061c36"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"1.5rem","gutter-desktop":"1.5rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","margin":"1rem","space-2xl":"2rem","space-2xs":"0.125rem","space-md":"0.75rem","space-xs":"0.25rem","space-lg":"1rem"},"fontFamily":{"headline-xl-mobile":["Plus Jakarta Sans"],"metric-readout-lg":["JetBrains Mono"],"data-mono":["JetBrains Mono"],"body-md":["Inter"],"title-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"metric-readout-md":["JetBrains Mono"],"label-caps":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"]},"fontSize":{"headline-xl-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}],"metric-readout-lg":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"data-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","fontWeight":"700"}],"metric-readout-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline/20"><img alt="OceanEmbed Scientific Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W1akBOgTDd7mAKY1Zgfe8mcEc8TQUK0RTelIfwNtBh9DdoMlx2lqOaFt1I0BDmjxfTtwKShC3w2t8A1zsRyL9Iqp8jrHHWtDCPKkfKkk-N1DGcmq6TC5rDIdDDKaDW4LRETrxnNRS_hYbQcbEP7i4Aujs2jAtgfyLBKO0z1UTM2OZcPUwqArzilJ4W1Mgy-K5Op5CjNkhmhwkGPtRsYmLJEJc0uaH_fxfsx8u6Rj9_Vefxo9AkfqnBoQ"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight font-extrabold text-white">OceanEmbed</span></div><span class="font-label-caps text-[10px] text-primary-fixed tracking-widest uppercase">SIH26066 Node</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs rounded bg-surface-variant/10 text-primary-fixed flex items-center justify-between font-label-caps text-label-caps"><span class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse"></span>SUBSURFACE TELEMETRY</span><span class="text-[9px] bg-primary/40 px-1 py-0.5 rounded text-white font-data-mono text-data-mono">AI ACTIVE</span></div></div><nav class="flex-1 px-space-md py-space-xs space-y-space-2xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a aria-current="page" class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="overview" href="#overview"><span class="material-symbols-outlined text-[20px] text-primary-fixed">dashboard</span><span class="font-body-md text-body-md flex-1">Overview</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="ocean-explorer" href="#explorer"><span class="material-symbols-outlined text-[20px] text-primary-fixed">explore</span><span class="font-body-md text-body-md flex-1">Ocean Explorer</span><span class="font-data-mono text-[10px] bg-primary/30 text-primary-fixed px-1.5 py-0.5 rounded">3D</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="temperature-reconstruction" href="#reconstruction"><span class="material-symbols-outlined text-[20px] text-primary-fixed">thermostat</span><span class="font-body-md text-body-md flex-1">Temperature Reconst.</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="vertical-profiles" href="#profiles"><span class="material-symbols-outlined text-[20px] text-primary-fixed">waves</span><span class="font-body-md text-body-md flex-1">Vertical Profiles</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="heatwave-intelligence" href="#heatwaves"><span class="material-symbols-outlined text-[20px] text-primary-fixed">warning</span><span class="font-body-md text-body-md flex-1">Heatwave Intel</span><span class="w-2 h-2 rounded-full bg-error ring-4 ring-error/20"></span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="historical-analogues" href="#analogues"><span class="material-symbols-outlined text-[20px] text-primary-fixed">history_toggle_off</span><span class="font-body-md text-body-md flex-1">Historical Analogues</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="scientific-trust" href="#trust"><span class="material-symbols-outlined text-[20px] text-primary-fixed">verified</span><span class="font-body-md text-body-md flex-1">Scientific Trust</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="data-sources" href="#datasources"><span class="material-symbols-outlined text-[20px] text-primary-fixed">database</span><span class="font-body-md text-body-md flex-1">Data Sources</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="model-performance" href="#performance"><span class="material-symbols-outlined text-[20px] text-primary-fixed">speed</span><span class="font-body-md text-body-md flex-1">Model Performance</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="monitoring-mlops" href="#mlops"><span class="material-symbols-outlined text-[20px] text-primary-fixed">monitoring</span><span class="font-body-md text-body-md flex-1">Monitoring &amp; MLOps</span></a><a class="group flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-variant/15 hover:text-white transition-colors" data-path="settings" href="#settings"><span class="material-symbols-outlined text-[20px] text-primary-fixed">settings</span><span class="font-body-md text-body-md flex-1">Settings</span></a></nav><div class="p-space-md border-t border-outline/20 bg-inverse-surface"><div class="rounded-lg bg-surface-variant/10 p-space-sm mb-space-sm"><div class="flex items-center justify-between mb-space-2xs"><span class="font-label-caps text-[10px] text-inverse-on-surface/70 uppercase">Benchmark</span><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span></div><p class="font-data-mono text-[11px] text-white leading-tight font-medium">GLORYS12V1 / ARGO Calibrated</p></div><button class="w-full flex items-center justify-between px-space-sm py-space-xs rounded text-inverse-on-surface/70 hover:text-white hover:bg-surface-variant/15 transition-colors" type="button"><span class="font-body-sm text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">keyboard_double_arrow_left</span>Collapse Shell</span><span class="font-data-mono text-[10px] text-inverse-on-surface/50">⌘[</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low border border-outline-variant/60 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Search lat/long, ARGO float ID, ocean basin, or coordinates..." type="text"/></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low border border-outline-variant/50 rounded-lg"><span class="material-symbols-outlined text-primary text-[16px]">public</span><span class="font-body-sm text-body-sm font-medium text-on-surface whitespace-nowrap">Indian Ocean (BoB)</span><span class="material-symbols-outlined text-outline text-[16px]">arrow_drop_down</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded font-data-mono text-[11px] text-on-surface"><span class="material-symbols-outlined text-[14px] text-primary">calendar_today</span><span>24 Oct 2024 · 12:00 UTC</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full font-label-caps text-label-caps text-on-surface-variant"><span>v2.4-EmbedOcean</span><span class="text-outline">•</span><span>Res 0.25°</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 bg-emerald-50 rounded-full border border-emerald-200"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-caps text-[10px] text-emerald-800 font-semibold tracking-wide">15 LEVELS ACTIVE</span></div><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-outline-variant/60 mx-space-2xs"></div><div class="flex items-center gap-space-sm pl-space-2xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALJBOiEeGIiSF1fAlShbhXKmJQUEt30gucHDSXljmtUOTUcO_QyhOmjrodbBmYlp-KEtq99JkHUeURM2WJ4wx-byPaK8_Hm44g4Rx7o1Jm_7rGjbiMeGxl2wof9qtFl_76M7I8buSKVQXlkeqkLD2k5k6oieq046x5mP0x0lc_Q2Jpq-ztGC0WSezd0lmkZ3eB3XZMCszvWfXWm32ornfSq1LYf4Egm_xjGyZY6szKcnB1j7KUJ6kj"/><div class="hidden sm:flex flex-col text-left"><span class="font-title-sm text-[13px] leading-tight text-on-surface font-semibold">Dr. Anya Sharma</span><span class="font-body-sm text-[11px] leading-tight text-outline">Lead Physical Oceanographer</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="w-full px-gutter-desktop py-space-xl"><div class="flex flex-col w-full">
+<!-- Operational Notification Banner -->
+<div class="mb-space-lg rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-2.5 w-2.5 items-center justify-center">
+<span class="absolute inline-flex h-3 w-3 animate-ping rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+</span>
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold">TELEMETRY BENCHMARK NODE SIH26066</span>
+<span class="text-outline">/</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Equatorial &amp; Northern Indian Ocean Assimilation Core (OSTIA-DUACS Coupled)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono text-[11px] bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant font-semibold">STATUS: PROD-SYNCHRONIZED</span>
+<span class="font-data-mono text-[11px] bg-primary/10 text-primary px-2 py-0.5 rounded font-semibold">CYCLE: 06:00 UTC</span>
+</div>
+</div>
+</div>
+<!-- Operational Header & Controls Strip -->
+<div class="mb-space-xl flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Deep Stratification Intelligence</span>
+<span class="font-data-mono text-body-sm text-outline">•</span>
+<span class="font-label-caps text-[11px] text-tertiary font-bold tracking-wider uppercase">INCOIS-ARGO CALIBRATED</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Ocean Intelligence Overview</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+        Autonomous AI-driven subsurface state reconstruction across the Arabian Sea, Bay of Bengal, and Equatorial Indian Ocean with continuous ARGO drift telemetry.
+      </p>
+</div>
+<!-- Right Controls: Basin Select, Range, Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">public</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface font-semibold focus:outline-none cursor-pointer">
+<option>Indian Ocean (Arabian Sea, BoB, Eq.)</option>
+<option>Arabian Sea Central (10°N-22°N)</option>
+<option>Bay of Bengal Stratified Sector</option>
+<option>Equatorial Wave Guide (5°S-5°N)</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">date_range</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">18 Oct – 24 Oct 2024</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface px-3 py-1.5 rounded-lg shadow-sm font-body-sm text-body-sm font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>NetCDF/GeoJSON</span>
+</button>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-surface-tint text-on-primary px-3.5 py-1.5 rounded-lg shadow-md font-body-sm text-body-sm font-semibold transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span>Run Scan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- KPI Statistical Deck (5 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-xl">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold">Temporal Cycle</span>
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+</div>
+<div>
+<div class="font-metric-readout-md text-metric-readout-md text-on-surface font-bold">24 Oct · 06:00</div>
+<p class="font-data-mono text-[11px] text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          OSTIA/DUACS Sync (2h ago)
+        </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-[11px] font-data-mono text-outline">
+<span>Latency: -120m</span>
+<span class="text-primary font-medium">Live Stream</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold">Basin Coverage</span>
+<span class="material-symbols-outlined text-[18px] text-primary">grid_view</span>
+</div>
+<div>
+<div class="font-metric-readout-md text-metric-readout-md text-on-surface font-bold">99.42%</div>
+<p class="font-data-mono text-[11px] text-on-surface-variant mt-1 truncate">
+          30°S–30°N, 40°E–110°E
+        </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-[11px] font-data-mono text-outline">
+<span>Res: 0.25° × 0.25°</span>
+<span class="text-emerald-700 font-semibold">14,240 Pixels</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold">In-Situ Collocation</span>
+<span class="material-symbols-outlined text-[18px] text-primary">sensors</span>
+</div>
+<div>
+<div class="font-metric-readout-md text-metric-readout-md text-on-surface font-bold">1,428 Floats</div>
+<p class="font-data-mono text-[11px] text-on-surface-variant mt-1">
+          Active ARGO &amp; INCOIS moorings
+        </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-[11px] font-data-mono text-outline">
+<span>98 BGC Sensors</span>
+<span class="text-primary font-medium">99.1% Fidelity</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-error font-semibold">Subsurface MHWs</span>
+<span class="material-symbols-outlined text-[18px] text-error">local_fire_department</span>
+</div>
+<div>
+<div class="font-metric-readout-md text-metric-readout-md text-error font-bold">4 Extreme Events</div>
+<p class="font-data-mono text-[11px] text-on-surface-variant mt-1">
+          2 Cat-3 (Arabian Sea Thermocline)
+        </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-[11px] font-data-mono text-outline">
+<span class="text-error font-semibold">+2.8°C Anomaly</span>
+<span class="bg-error-container text-on-error-container px-1 rounded text-[10px] font-bold">HIGH RISK</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold">ML Inference Kernel</span>
+<span class="material-symbols-outlined text-[18px] text-primary">neurology</span>
+</div>
+<div>
+<div class="font-metric-readout-md text-metric-readout-md text-on-surface font-bold">v2.4-EmbedOcean</div>
+<p class="font-data-mono text-[11px] text-on-surface-variant mt-1">
+          15 Stratified Depth Layers
+        </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-[11px] font-data-mono text-outline">
+<span>Med: 184ms / col</span>
+<span class="text-emerald-700 font-semibold">Pass: 99.8%</span>
+</div>
+</div>
+</div>
+<!-- Primary Geospatial Visualization & Stratification Deck -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left 8-col: Basin Command Map Frame -->
+<div class="xl:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Interactive Layer Selector Bar -->
+<div class="bg-surface-container-low px-space-md py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-caps text-[11px] font-bold tracking-wider transition-colors" type="button">
+            SST (SURFACE)
+          </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-[11px] font-semibold tracking-wider transition-colors" type="button">
+            SALINITY (SSS)
+          </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-[11px] font-semibold tracking-wider transition-colors" type="button">
+            HEIGHT (SLA)
+          </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caps text-[11px] font-semibold tracking-wider transition-colors" type="button">
+            CURRENTS (OSCAR)
+          </button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-caps text-[11px] font-bold tracking-wider shadow-sm flex items-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-ping"></span>
+            RECONSTRUCTED (100M)
+          </button>
+<button class="px-2.5 py-1 rounded bg-error/10 hover:bg-error/20 text-error font-label-caps text-[11px] font-semibold tracking-wider transition-colors" type="button">
+            MHW ANOMALY
+          </button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Main Map Viewport Simulated Render -->
+<div class="relative w-full h-[480px] bg-[#071326] overflow-hidden flex flex-col justify-between p-space-md select-none">
+<!-- Living Ocean SVG Canvas Simulation with Thermal Bathymetry Contours -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-85" preserveaspectratio="none" viewbox="0 0 900 480">
+<defs>
+<radialgradient cx="45%" cy="40%" id="oceanGlow" r="65%">
+<stop offset="0%" stop-color="#0b2c4d" stop-opacity="0.8"></stop>
+<stop offset="50%" stop-color="#061c36" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#030b17" stop-opacity="1"></stop>
+</radialgradient>
+<!-- Heatwave Anomalous Contour Gradient -->
+<radialgradient cx="30%" cy="35%" id="mhwCore1" r="28%">
+<stop offset="0%" stop-color="#ba1a1a" stop-opacity="0.6"></stop>
+<stop offset="45%" stop-color="#d97706" stop-opacity="0.35"></stop>
+<stop offset="85%" stop-color="#06b6d4" stop-opacity="0.05"></stop>
+<stop offset="100%" stop-color="#06b6d4" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="72%" cy="45%" id="mhwCore2" r="22%">
+<stop offset="0%" stop-color="#f43f5e" stop-opacity="0.5"></stop>
+<stop offset="60%" stop-color="#0284c7" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#0284c7" stop-opacity="0"></stop>
+</radialgradient>
+<pattern height="40" id="gridPattern" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3a5f" stroke-opacity="0.4" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<!-- Deep Ocean Canvas Base -->
+<rect fill="url(#oceanGlow)" height="480" width="900"></rect>
+<rect fill="url(#gridPattern)" height="480" width="900"></rect>
+<!-- MHW Heat Clusters -->
+<circle cx="280" cy="180" fill="url(#mhwCore1)" r="140"></circle>
+<circle cx="640" cy="220" fill="url(#mhwCore2)" r="110"></circle>
+<!-- Bathymetry / Thermal Ridge Lines -->
+<path d="M -20,240 C 140,220 220,130 310,160 C 400,190 490,280 620,240 C 720,200 820,230 920,180" fill="none" stroke="#00f0ff" stroke-dasharray="4 2" stroke-opacity="0.45" stroke-width="1.2"></path>
+<path d="M -20,280 C 150,260 240,170 330,200 C 430,230 520,320 640,280 C 740,240 830,270 920,220" fill="none" stroke="#22d3ee" stroke-opacity="0.3" stroke-width="0.8"></path>
+<path d="M -20,320 C 160,300 260,210 350,240 C 450,270 540,360 660,320 C 760,280 840,310 920,260" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="0.6"></path>
+<!-- Stylized Landmass Silhouette: Indian Subcontinent Coastline & Horn of Africa -->
+<path d="M 280,0 L 290,40 L 320,80 L 345,130 L 380,185 L 400,230 L 415,245 L 430,200 L 460,140 L 510,90 L 560,70 L 590,0 Z" fill="#132a4a" fill-opacity="0.8" stroke="#334e68" stroke-width="1.5"></path>
+<path d="M 0,110 L 40,130 L 80,170 L 110,240 L 130,290 L 90,360 L 50,420 L 0,440 Z" fill="#132a4a" fill-opacity="0.8" stroke="#334e68" stroke-width="1.5"></path>
+<path d="M 720,80 L 760,110 L 790,170 L 810,260 L 840,330 L 890,390 L 900,400 L 900,0 L 710,0 Z" fill="#132a4a" fill-opacity="0.8" stroke="#334e68" stroke-width="1.5"></path>
+<!-- Sri Lanka -->
+<path d="M 435,260 C 445,260 450,280 440,295 C 430,295 425,275 435,260 Z" fill="#132a4a" stroke="#334e68" stroke-width="1"></path>
+<!-- Active ARGO Drift Coordinates (Cyan Nodes) -->
+<g>
+<circle class="animate-pulse" cx="230" cy="190" fill="#4cd7f6" r="3.5"></circle>
+<circle cx="230" cy="190" fill="none" r="8" stroke="#4cd7f6" stroke-opacity="0.6" stroke-width="0.75"></circle>
+<circle cx="270" cy="240" fill="#4cd7f6" r="3"></circle>
+<circle cx="310" cy="290" fill="#4cd7f6" r="3"></circle>
+<circle cx="210" cy="310" fill="#4cd7f6" r="3"></circle>
+<circle cx="180" cy="220" fill="#4cd7f6" r="3"></circle>
+<circle cx="340" cy="210" fill="#4cd7f6" r="3"></circle>
+<!-- BoB Cluster -->
+<circle cx="510" cy="200" fill="#4cd7f6" r="3.5"></circle>
+<circle cx="510" cy="200" fill="none" r="8" stroke="#4cd7f6" stroke-opacity="0.6" stroke-width="0.75"></circle>
+<circle cx="550" cy="230" fill="#4cd7f6" r="3"></circle>
+<circle cx="480" cy="260" fill="#4cd7f6" r="3"></circle>
+<circle cx="530" cy="290" fill="#4cd7f6" r="3"></circle>
+<circle cx="580" cy="270" fill="#4cd7f6" r="3"></circle>
+<circle cx="620" cy="220" fill="#4cd7f6" r="3"></circle>
+<!-- Equatorial Array (RAMA / INCOIS Moored) -->
+<circle cx="380" cy="360" fill="#facc15" r="4"></circle>
+<circle cx="440" cy="360" fill="#facc15" r="4"></circle>
+<circle cx="500" cy="360" fill="#facc15" r="4"></circle>
+<circle cx="560" cy="360" fill="#facc15" r="4"></circle>
+<line stroke="#facc15" stroke-dasharray="2 4" stroke-opacity="0.4" stroke-width="1" x1="360" x2="580" y1="360" y2="360"></line>
+</g>
+<!-- Heatwave Alert Perimeter Polygon (Arabian Sea) -->
+<polygon fill="#ba1a1a" fill-opacity="0.12" points="210,140 320,130 350,210 240,240" stroke="#f43f5e" stroke-dasharray="5 3" stroke-width="1.5"></polygon>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="10" font-weight="600" letter-spacing="0.05em" x="225" y="132">MHW-AS-01 [CAT 3 STRONG]</text>
+<!-- Current Flow Vectors (Small Arrows) -->
+<path d="M 240,320 L 255,315 M 255,315 L 248,313 M 255,315 L 250,320" stroke="#4cd7f6" stroke-opacity="0.7" stroke-width="1"></path>
+<path d="M 280,310 L 295,307 M 295,307 L 288,305 M 295,307 L 290,312" stroke="#4cd7f6" stroke-opacity="0.7" stroke-width="1"></path>
+<path d="M 320,315 L 335,316 M 335,316 L 328,312 M 335,316 L 329,320" stroke="#4cd7f6" stroke-opacity="0.7" stroke-width="1"></path>
+<path d="M 470,300 L 485,310 M 485,310 L 480,303 M 485,310 L 477,308" stroke="#4cd7f6" stroke-opacity="0.7" stroke-width="1"></path>
+</svg>
+<!-- Top Floating Overlay: Depth Scrubber Capsule -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-space-sm bg-[#091e38]/85 backdrop-blur-md px-space-md py-space-xs rounded-xl shadow-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">vertical_align_bottom</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">Subsurface Target Depth</span>
+<span class="font-data-mono text-[12px] text-white font-bold">100m (Thermocline Core)</span>
+</div>
+</div>
+<!-- Quick depth steps -->
+<div class="flex items-center gap-1 bg-[#040e1c] p-0.5 rounded-lg">
+<button class="px-2 py-0.5 rounded font-data-mono text-[11px] text-inverse-on-surface/60 hover:text-white">0m</button>
+<button class="px-2 py-0.5 rounded font-data-mono text-[11px] text-inverse-on-surface/60 hover:text-white">50m</button>
+<button class="px-2.5 py-0.5 rounded bg-primary font-data-mono text-[11px] text-on-primary font-bold shadow-sm">100m</button>
+<button class="px-2 py-0.5 rounded font-data-mono text-[11px] text-inverse-on-surface/60 hover:text-white">200m</button>
+<button class="px-2 py-0.5 rounded font-data-mono text-[11px] text-inverse-on-surface/60 hover:text-white">500m</button>
+<button class="px-2 py-0.5 rounded font-data-mono text-[11px] text-inverse-on-surface/60 hover:text-white">1000m</button>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-primary-fixed font-data-mono text-[11px]">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Uncertainty: ±0.38°C</span>
+</div>
+</div>
+<!-- Center Crosshair Inspection Pin (Simulated Focus Point) -->
+<div class="absolute left-[34%] top-[42%] -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center">
+<div class="w-8 h-8 rounded-full border-2 border-primary-fixed/80 flex items-center justify-center animate-spin" style="animation-duration: 10s;">
+<div class="w-1.5 h-1.5 bg-primary-container rounded-full"></div>
+</div>
+<div class="mt-2 bg-[#061930]/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-xl text-left whitespace-nowrap">
+<div class="font-data-mono text-[11px] text-primary-fixed font-bold">STATION: ARGO-2902781</div>
+<div class="font-data-mono text-[11px] text-white">Lat 12.45°N, Lon 68.20°E</div>
+<div class="font-data-mono text-[11px] text-emerald-400 font-semibold">T(100m): 24.8°C (Anom: +2.4°C)</div>
+</div>
+</div>
+<!-- Bottom Status Readout Footer -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-space-sm bg-[#061930]/80 backdrop-blur-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-center gap-space-md font-data-mono text-[11px] text-inverse-on-surface/80">
+<span>Projection: Mercator Cylindrical</span>
+<span class="text-outline">•</span>
+<span>Center: 10.0°N, 75.0°E</span>
+<span class="text-outline">•</span>
+<span class="text-primary-fixed">RAMA Arrays: Synced (4 Active)</span>
+</div>
+<!-- Palette Scale Legend -->
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-[10px] text-inverse-on-surface/70">16°C</span>
+<div class="w-28 h-2 rounded-full bg-gradient-to-r from-blue-700 via-cyan-400 via-amber-400 to-rose-600"></div>
+<span class="font-data-mono text-[10px] text-inverse-on-surface/70">31°C</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4-col: Stratification & Ocean Heat Column -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Stratification Profile Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between flex-1">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Vertical Thermal Profile</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ARGO 2902781 vs. AI Reconstructed</p>
+</div>
+<span class="font-data-mono text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded font-bold uppercase">Depth-T</span>
+</div>
+<!-- Mini SVG Profile Chart: Depth (0-1000m) vs Temp (10°C to 30°C) -->
+<div class="relative w-full h-44 bg-surface-container-low rounded-lg p-2 my-space-xs">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 240 140">
+<!-- Gridlines -->
+<line stroke="#cbd5e1" stroke-dasharray="2 2" stroke-width="0.75" x1="40" x2="230" y1="20" y2="20"></line>
+<line stroke="#cbd5e1" stroke-dasharray="2 2" stroke-width="0.75" x1="40" x2="230" y1="50" y2="50"></line>
+<line stroke="#cbd5e1" stroke-dasharray="2 2" stroke-width="0.75" x1="40" x2="230" y1="80" y2="80"></line>
+<line stroke="#cbd5e1" stroke-dasharray="2 2" stroke-width="0.75" x1="40" x2="230" y1="120" y2="120"></line>
+<!-- Mixed Layer / Thermocline Box Highlight -->
+<rect fill="#06b6d4" fill-opacity="0.12" height="38" width="190" x="40" y="32"></rect>
+<text fill="#00687a" font-family="JetBrains Mono" font-size="8" font-weight="700" x="135" y="44">THERMOCLINE LAYER (40-120m)</text>
+<!-- Depth Axis Labels -->
+<text fill="#64748b" font-family="JetBrains Mono" font-size="9" x="5" y="22">0m</text>
+<text fill="#64748b" font-family="JetBrains Mono" font-size="9" x="5" y="52">100m</text>
+<text fill="#64748b" font-family="JetBrains Mono" font-size="9" x="5" y="82">300m</text>
+<text fill="#64748b" font-family="JetBrains Mono" font-size="9" x="5" y="124">1000m</text>
+<!-- Climatology Curve (Grey dotted) -->
+<path d="M 210,15 C 205,35 150,55 105,80 C 80,100 65,115 58,130" fill="none" stroke="#94a3b8" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<!-- In-Situ ARGO Observation Profile (Solid Cyan) -->
+<path d="M 215,15 C 213,32 170,52 118,78 C 88,98 72,118 64,130" fill="none" stroke="#0284c7" stroke-width="2"></path>
+<!-- AI Reconstructed Curve (Teal dashed) -->
+<path d="M 214,15 C 211,33 166,54 116,79 C 87,99 71,118 63,130" fill="none" stroke="#00687a" stroke-dasharray="4 2" stroke-width="1.8"></path>
+<!-- Current Scrubber Focus Point (100m) -->
+<circle cx="168" cy="52" fill="#ba1a1a" r="4"></circle>
+<text fill="#ba1a1a" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="178" y="55">24.8°C</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-[11px] font-data-mono text-outline">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-0.5 bg-[#0284c7]"></span>ARGO Truth</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-0.5 bg-[#00687a]"></span>OceanEmbed v2.4</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-0.5 bg-slate-400"></span>WOA23 Clim</span>
+</div>
+</div>
+<!-- Ocean Heat Content (OHC 700m) Trend Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">30-Day Heat Content Anomaly</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Upper 700m Integrated Energy</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-tertiary">trending_up</span>
+</div>
+<div class="flex items-baseline gap-space-sm my-space-xs">
+<span class="font-metric-readout-lg text-metric-readout-lg text-on-surface font-extrabold">+0.42</span>
+<span class="font-title-sm text-title-sm text-tertiary font-bold">GJ/m²</span>
+<span class="font-label-caps text-[11px] bg-rose-50 text-rose-700 px-2 py-0.5 rounded font-bold">+18.4% above 1993-2020 base</span>
+</div>
+<!-- Sparkline SVG -->
+<div class="w-full h-16 bg-surface-container-low rounded-lg p-1.5">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 200 45">
+<defs>
+<lineargradient id="heatGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#0053db" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#0053db" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0,35 Q 25,32 50,30 T 100,26 T 150,15 T 200,8 L 200,45 L 0,45 Z" fill="url(#heatGrad)"></path>
+<path d="M 0,35 Q 25,32 50,30 T 100,26 T 150,15 T 200,8" fill="none" stroke="#0053db" stroke-width="2"></path>
+<circle cx="200" cy="8" fill="#0053db" r="3"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between text-[11px] font-data-mono text-outline mt-space-xs">
+<span>25 Sep 2024</span>
+<span class="text-tertiary font-medium">Accumulating Thermocline Stress</span>
+<span>Today</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Lower Analytical Quad Grid (Jobs Table, Trust Breakdown, MHW Alerts, Ingestion Pipe) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left 7-col: Reconstruction Jobs & Telemetry Feed -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Recent Subsurface Reconstructions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time inference queue across target coordinates and ARGO matchings</p>
+</div>
+<button class="font-data-mono text-[11px] bg-surface-container px-2.5 py-1 rounded text-primary font-semibold hover:bg-surface-container-high transition-colors">
+          View All Logs (248)
+        </button>
+</div>
+<!-- High Density Scientific Matrix Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-data-mono text-[12px] border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary text-[11px] uppercase tracking-wider font-semibold">
+<th class="py-2.5 px-3 rounded-l-lg">Job / ID</th>
+<th class="py-2.5 px-2">Basin Coordinates</th>
+<th class="py-2.5 px-2">Timestamp</th>
+<th class="py-2.5 px-2">Depth Range</th>
+<th class="py-2.5 px-2">Latency</th>
+<th class="py-2.5 px-2">Trust Flag</th>
+<th class="py-2.5 px-3 rounded-r-lg text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">#RC-99201</td>
+<td class="py-2 px-2 text-on-surface">14.20°N, 64.50°E (AS)</td>
+<td class="py-2 px-2 text-on-surface-variant">05:48:12 UTC</td>
+<td class="py-2 px-2 text-on-surface">0 – 1000m</td>
+<td class="py-2 px-2 text-on-surface">178ms</td>
+<td class="py-2 px-2">
+<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-800 font-bold px-2 py-0.5 rounded text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>PASS
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="text-primary hover:text-surface-tint font-semibold text-[11px]">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">#RC-99200</td>
+<td class="py-2 px-2 text-on-surface">08.15°N, 88.30°E (BoB)</td>
+<td class="py-2 px-2 text-on-surface-variant">05:46:50 UTC</td>
+<td class="py-2 px-2 text-on-surface">0 – 750m</td>
+<td class="py-2 px-2 text-on-surface">164ms</td>
+<td class="py-2 px-2">
+<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-800 font-bold px-2 py-0.5 rounded text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>PASS
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="text-primary hover:text-surface-tint font-semibold text-[11px]">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">#RC-99198</td>
+<td class="py-2 px-2 text-on-surface">01.00°S, 80.50°E (Eq)</td>
+<td class="py-2 px-2 text-on-surface-variant">05:41:22 UTC</td>
+<td class="py-2 px-2 text-on-surface">0 – 1200m</td>
+<td class="py-2 px-2 text-on-surface">195ms</td>
+<td class="py-2 px-2">
+<span class="inline-flex items-center gap-1 bg-amber-50 text-amber-800 font-bold px-2 py-0.5 rounded text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>CAUTION
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="text-primary hover:text-surface-tint font-semibold text-[11px]">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">#RC-99195</td>
+<td class="py-2 px-2 text-on-surface">21.80°N, 68.90°E (Guj)</td>
+<td class="py-2 px-2 text-on-surface-variant">05:39:10 UTC</td>
+<td class="py-2 px-2 text-on-surface">0 – 500m</td>
+<td class="py-2 px-2 text-on-surface">142ms</td>
+<td class="py-2 px-2">
+<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-800 font-bold px-2 py-0.5 rounded text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>PASS
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="text-primary hover:text-surface-tint font-semibold text-[11px]">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">#RC-99192</td>
+<td class="py-2 px-2 text-on-surface">12.10°N, 93.40°E (And)</td>
+<td class="py-2 px-2 text-on-surface-variant">05:32:04 UTC</td>
+<td class="py-2 px-2 text-on-surface">0 – 1000m</td>
+<td class="py-2 px-2 text-on-surface">188ms</td>
+<td class="py-2 px-2">
+<span class="inline-flex items-center gap-1 bg-rose-50 text-rose-800 font-bold px-2 py-0.5 rounded text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>OOD/BATHY
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="text-primary hover:text-surface-tint font-semibold text-[11px]">Inspect</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-[11px] font-data-mono text-outline">
+<span>Inference Engine: Transformer Attention + GNN Spatial Prior</span>
+<span>SIH Node Validation: True</span>
+</div>
+</div>
+<!-- Right 5-col: Trust Breakdown & Active MHW Feed -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Scientific Trust & Calibration Breakdown Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Scientific Trust Matrix</h3>
+<span class="font-data-mono text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">88.6% High Conf</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Ensemble variance &amp; physical thermodynamic consistency score across active grid cells.
+        </p>
+<!-- Segmented Trust Distribution Bar -->
+<div class="w-full h-3 rounded-full bg-surface-container-high flex overflow-hidden mb-space-sm">
+<div class="bg-primary h-full" style="width: 88.6%;" title="Reliable: 88.6%"></div>
+<div class="bg-amber-400 h-full" style="width: 9.8%;" title="Caution (Missing Winds): 9.8%"></div>
+<div class="bg-rose-500 h-full" style="width: 1.6%;" title="Extreme Bathymetry: 1.6%"></div>
+</div>
+<div class="grid grid-cols-3 gap-space-xs font-data-mono text-[11px]">
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-outline block text-[10px]">HIGH CONF</span>
+<span class="font-bold text-primary">88.6%</span>
+<span class="text-on-surface-variant block text-[9px]">Calibrated</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-outline block text-[10px]">CAUTION</span>
+<span class="font-bold text-amber-700">9.8%</span>
+<span class="text-on-surface-variant block text-[9px]">Wind delayed</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-outline block text-[10px]">OOD FLAG</span>
+<span class="font-bold text-rose-700">1.6%</span>
+<span class="text-on-surface-variant block text-[9px]">Steep ridge</span>
+</div>
+</div>
+</div>
+<!-- Marine Heatwave Active Bulletins -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex-1 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">warning</span>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Subsurface Heatwave Alerts</h3>
+</div>
+<span class="font-data-mono text-[10px] bg-rose-100 text-rose-800 px-2 py-0.5 rounded font-bold uppercase">2 ACTIVE CRITICAL</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Alert 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-rose-500">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-[11px] font-bold text-rose-700">MHW-AS-01 • Arabian Sea Central</span>
+<span class="font-label-caps text-[10px] bg-rose-100 text-rose-800 font-bold px-1.5 py-0.2 rounded">CATEGORY 3 STRONG</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface mt-1">
+              Thermal anomaly peak of <strong class="text-rose-700">+2.8°C at 75m depth</strong> (Thermocline displacement). Ongoing for 14 continuous days.
+            </p>
+</div>
+<!-- Alert 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-amber-500">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-[11px] font-bold text-amber-800">MHW-BOB-04 • South Bay of Bengal</span>
+<span class="font-label-caps text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded">CATEGORY 2 MODERATE</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface mt-1">
+              Freshwater barrier layer trapping heat: <strong class="text-amber-800">+1.9°C anomaly at 50m</strong>. Duration: 6 days.
+            </p>
+</div>
+</div>
+<div class="mt-space-xs flex items-center justify-between font-data-mono text-[10px] text-outline">
+<span>Criterion: Hobday et al. (90th percentile)</span>
+<button class="text-primary hover:underline font-semibold">Heatwave Intel Module →</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Freshness & Environmental Ingestion Status Pipeline Strip -->
+<div class="mt-space-lg bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_sync</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-wider">Multi-Satellite &amp; In-Situ Ingestion Pipeline</span>
+</div>
+<span class="font-data-mono text-[11px] text-outline">Next Copernicus Sync in 52 mins</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-sm mt-space-xs">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">OSTIA SST</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">L4 0.05° Foundation</span>
+</div>
+<span class="font-data-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded font-bold">FRESH (2h)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">SMAP / SSS</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">JPL Salinity V5.0</span>
+</div>
+<span class="font-data-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded font-bold">FRESH (4h)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">DUACS SLA</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Altimeter Sea Level</span>
+</div>
+<span class="font-data-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded font-bold">FRESH (3h)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">CCMP Winds</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">V3.1 Scatterometer</span>
+</div>
+<span class="font-data-mono text-[10px] text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded font-bold">DELAYED (8h)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] font-bold text-on-surface">ARGO In-Situ</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">GDAC Collocation</span>
+</div>
+<span class="font-data-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded font-bold">SYNCED</span>
+</div>
+</div>
+</div>
+</div></div></main></div></body></html>
