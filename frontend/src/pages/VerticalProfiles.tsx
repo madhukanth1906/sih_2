@@ -130,15 +130,15 @@ const VerticalProfiles = () => {
 
 <svg className="w-full h-full overflow-visible font-data-mono" id="profile-svg" viewBox="0 0 800 500">
 <defs>
-<lineargradient id="uncertaintyGradient" x1="0" x2="0" y1="0" y2="1">
+<linearGradient id="uncertaintyGradient" x1="0" x2="0" y1="0" y2="1">
 <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.32"></stop>
 <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.22"></stop>
 <stop offset="100%" stopColor="#0053db" stopOpacity="0.12"></stop>
-</lineargradient>
-<lineargradient id="thermoclineHatch" x1="0" x2="1" y1="0" y2="0">
+</linearGradient>
+<linearGradient id="thermoclineHatch" x1="0" x2="1" y1="0" y2="0">
 <stop offset="0%" stopColor="#e0f2fe" stopOpacity="0.7"></stop>
 <stop offset="100%" stopColor="#bae6fd" stopOpacity="0.2"></stop>
-</lineargradient>
+</linearGradient>
 </defs>
 
 

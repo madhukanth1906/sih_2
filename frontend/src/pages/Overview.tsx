@@ -190,23 +190,23 @@ const Overview = () => {
 
 <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-85" preserveAspectRatio="none" viewBox="0 0 900 480">
 <defs>
-<radialgradient cx="45%" cy="40%" id="oceanGlow" r="65%">
+<radialGradient cx="45%" cy="40%" id="oceanGlow" r="65%">
 <stop offset="0%" stopColor="#0b2c4d" stopOpacity="0.8"></stop>
 <stop offset="50%" stopColor="#061c36" stopOpacity="0.9"></stop>
 <stop offset="100%" stopColor="#030b17" stopOpacity="1"></stop>
-</radialgradient>
+</radialGradient>
 
-<radialgradient cx="30%" cy="35%" id="mhwCore1" r="28%">
+<radialGradient cx="30%" cy="35%" id="mhwCore1" r="28%">
 <stop offset="0%" stopColor="#ba1a1a" stopOpacity="0.6"></stop>
 <stop offset="45%" stopColor="#d97706" stopOpacity="0.35"></stop>
 <stop offset="85%" stopColor="#06b6d4" stopOpacity="0.05"></stop>
 <stop offset="100%" stopColor="#06b6d4" stopOpacity="0"></stop>
-</radialgradient>
-<radialgradient cx="72%" cy="45%" id="mhwCore2" r="22%">
+</radialGradient>
+<radialGradient cx="72%" cy="45%" id="mhwCore2" r="22%">
 <stop offset="0%" stopColor="#f43f5e" stopOpacity="0.5"></stop>
 <stop offset="60%" stopColor="#0284c7" stopOpacity="0.1"></stop>
 <stop offset="100%" stopColor="#0284c7" stopOpacity="0"></stop>
-</radialgradient>
+</radialGradient>
 <pattern height="40" id="gridPattern" patternUnits="userSpaceOnUse" width="40">
 <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3a5f" strokeOpacity="0.4" strokeWidth="0.5"></path>
 </pattern>
@@ -374,10 +374,10 @@ const Overview = () => {
 <div className="w-full h-16 bg-surface-container-low rounded-lg p-1.5">
 <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 200 45">
 <defs>
-<lineargradient id="heatGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<linearGradient id="heatGrad" x1="0%" x2="0%" y1="0%" y2="100%">
 <stop offset="0%" stopColor="#0053db" stopOpacity="0.3"></stop>
 <stop offset="100%" stopColor="#0053db" stopOpacity="0"></stop>
-</lineargradient>
+</linearGradient>
 </defs>
 <path d="M 0,35 Q 25,32 50,30 T 100,26 T 150,15 T 200,8 L 200,45 L 0,45 Z" fill="url(#heatGrad)"></path>
 <path d="M 0,35 Q 25,32 50,30 T 100,26 T 150,15 T 200,8" fill="none" stroke="#0053db" strokeWidth="2"></path>

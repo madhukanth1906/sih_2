@@ -100,6 +100,12 @@ def convert_html_to_jsx(html_content):
     jsx_text = jsx_text.replace('letter-spacing=', 'letterSpacing=')
     jsx_text = jsx_text.replace('preserveaspectratio=', 'preserveAspectRatio=')
     
+    # SVG Tags
+    jsx_text = jsx_text.replace('<radialgradient', '<radialGradient')
+    jsx_text = jsx_text.replace('</radialgradient>', '</radialGradient>')
+    jsx_text = jsx_text.replace('<lineargradient', '<linearGradient')
+    jsx_text = jsx_text.replace('</lineargradient>', '</linearGradient>')
+    
     # Also add the missing background map for OceanExplorer explicitly if it's there
     jsx_text = jsx_text.replace('data-location="Arabian Sea, Indian Ocean" style={{  }}', 'data-location="Arabian Sea, Indian Ocean" style={{ backgroundImage: "url(\'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072\')" }}')
     
